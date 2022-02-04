@@ -38,18 +38,18 @@ namespace EasySave.Model
                     if("FULL".Equals(backupData.GetValueOrDefault("type")))
                     {
                         BackupWork backupWork = new FullBackupWork(backupData.GetValueOrDefault("name"), backupData.GetValueOrDefault("sourceDirectory"), backupData.GetValueOrDefault("targetDirectory"));
-                        backupWork.Subscribe(Program.instance.logObserver);
-                        backupWork.Subscribe(Program.instance.stateObserver);
-                        backupWork.Subscribe(Program.instance.saveObserver);
+                        //TODO backupWork.Subscribe(Program.instance.logObserver);
+                        //TODO backupWork.Subscribe(Program.instance.stateObserver);
+                        //TODO backupWork.Subscribe(Program.instance.saveObserver);
                         output.Add(backupWork);
                         names.Add(backupData.GetValueOrDefault("name"));
                     }
                     else if("DIFFERENTIAL".Equals(backupData.GetValueOrDefault("type")))
                     {
                         BackupWork backupWork = new DifferentialBackupWork(backupData.GetValueOrDefault("name"), backupData.GetValueOrDefault("sourceDirectory"), backupData.GetValueOrDefault("targetDirectory"));
-                        backupWork.Subscribe(Program.instance.logObserver);
-                        backupWork.Subscribe(Program.instance.stateObserver);
-                        backupWork.Subscribe(Program.instance.saveObserver);
+                        //TODO backupWork.Subscribe(Program.instance.logObserver);
+                        //TODO backupWork.Subscribe(Program.instance.stateObserver);
+                        //TODO backupWork.Subscribe(Program.instance.saveObserver);
                         output.Add(backupWork);
                         names.Add(backupData.GetValueOrDefault("name"));
                     }
